@@ -24,5 +24,6 @@ class TaskManagerApp < Sinatra::Base
   get '/tasks/:id' do |id|
     @task = TaskManager.find(id.to_i)
     erb :show
+    stuff
   end
 end
