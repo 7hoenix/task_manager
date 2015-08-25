@@ -1,6 +1,12 @@
-<form action="/tasks" method="post">
-  <p>Enter a new task:</p>
-  <input type="text" name="task[title]"/><br/>
-  <textarea name="task[description]"></textarea><br/>
-  <input type="submit"/>
-</form>
+<div class="container">
+  <h1>New Task</h1>
+  <div class="col-md-10 col-md-offset-1 form-group has-feedback has-success">
+    <form action="/tasks" method="post">
+      <label for="newTask">Enter a new task</label>
+      <input type="text" class="form-control" id="newTask" name="task[title]"/><br/>
+      <label for="description">Description</label>
+      <textarea class="form-control" id="descripiton" name="task[description]"></textarea><br/>
+      <input type="submit" class="btn btn-lg btn-primary"/>
+    </form>
+  </div>
+</div>
