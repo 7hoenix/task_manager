@@ -4,6 +4,6 @@ tasks:
   title: sweet title
   description: good description
 - id: 2
-  title: sweet title
-  description: good description
+  title: other title
+  description: better description
 total: 2
