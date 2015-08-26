@@ -3,7 +3,4 @@ tasks:
 - id: 1
   title: sweet title
   description: good description
-- id: 2
-  title: other title
-  description: better description
 total: 2
