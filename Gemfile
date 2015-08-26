@@ -1,4 +1,7 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'sinatra', require: 'sinatra/base'
-gem 'shotgun'
+gem "sinatra", require: "sinatra/base"
+gem "shotgun"
+gem "minitest"
+gem "rspec"
+gem "pry"
