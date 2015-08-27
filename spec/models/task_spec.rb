@@ -3,9 +3,9 @@ require_relative "../spec_helper"
 RSpec.describe Task do
   describe "#initialize" do
     it "assigns the proper attributes" do
-    attributes = { "id" => 1,
-                   "title" => "sweet title",
-                   "description" => "good description"
+    attributes = { :id => 1,
+                   :title => "sweet title",
+                   :description => "good description"
     }
       task = Task.new(attributes)
 
