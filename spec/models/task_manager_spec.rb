@@ -58,25 +58,20 @@ RSpec.describe TaskManager do
 
   describe "#update" do
     it "changes the values of the object" do
-      attributes = { :title => "sweet title",
-                     :description => "good description"
-      }
-      TaskManager.create(attributes)
-
       moar_attributes = { :title => "other title",
                           :description => "better description"
       }
-      task2 = TaskManager.create(moar_attributes)
+      task = TaskManager.create(moar_attributes)
 
-      even_moar_attributes = { :title => "moar different title",
-                     :description => "moar different description"
-      }
-      TaskManager.update(task2.id, even_moar_attributes)
+      task.title = "different title"
+      task.description = "different description"
 
-      expected = TaskManager.find(task2.id)
+      TaskManager.update(task.id, task)
 
-      expect(expected.title).to eq("moar different title")
-      expect(expected.description).to eq("moar different description")
+      expected = TaskManager.find(task.id)
+
+      expect(expected.title).to eq("different title")
+      expect(expected.description).to eq("different description")
     end
   end
 

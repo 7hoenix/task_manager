@@ -36,7 +36,8 @@ class TaskManager
   end
 
   def self.update(id, task)
-    database.from(:tasks).where(id: id).update(task)
+    database.from(:tasks).where(id: id).update(title: task.title, description:
+      task.description)
 
     # database.transaction do
       # target = database['tasks'].find { |data| data["id"] == id }

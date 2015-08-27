@@ -1,7 +1,7 @@
 class Task
-  attr_reader :id,
-              :title,
-              :description
+  attr_accessor :id,
+                :title,
+                :description
 
   def initialize(task)
     @id          = task.fetch(:id)
