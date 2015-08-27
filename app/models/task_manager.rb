@@ -25,7 +25,7 @@ class TaskManager
 
   def self.update(id, task)
     dataset.where(id: id).update(title: task.title, description:
-      task.description)
+                                        task.description)
   end
 
   def self.delete(id)
@@ -33,13 +33,11 @@ class TaskManager
   end
 
   def self.all
-    raw_tasks = dataset.all
-    raw_tasks.map { |data| Task.new(data) }
+    dataset.all.map { |data| Task.new(data) }
   end
 
   def self.find(id)
-    raw_task = dataset.where(id: id).first
-    Task.new(raw_task)
+    Task.new(dataset.where(id: id).first)
   end
 
   def self.delete_all
